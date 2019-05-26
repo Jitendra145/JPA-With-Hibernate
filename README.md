@@ -3,9 +3,9 @@ It's step by step process of creating Hibernate application using Spring Boot, H
 Section 5: JPA and hibernate in depth
 
 Introduction to Jpa and Hibernate in depth
-Step 1: Create a JPA project with H2 and Spring Boot 
 
-Step 2: Create JPA Entity Course
+# Step 1: Create a JPA project with H2 and Spring Boot 
+# Step 2: Create JPA Entity Course
 
 package com.jitendra.jpa.hibernate.entity;
 
@@ -44,7 +44,7 @@ public class Course {
     
 }
 
-Step 3:Create findById using JPA EntityManager
+# Step 3:Create findById using JPA EntityManager
 
 package com.jitendra.jpa.hibernate.repository;
 
@@ -97,7 +97,7 @@ public class DemoApplication implements CommandLineRunner {
 
 }
 
-Step 4. configuring application.properties to enable H2 console
+# Step 4. configuring application.properties to enable H2 console
 
 #enabling H2 console
 spring.h2.console.enabled=true
