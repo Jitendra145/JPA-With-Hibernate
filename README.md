@@ -61,7 +61,7 @@ Introduction to Jpa and Hibernate in depth
             return em.find(Course.class, id);
         }
     }
-
+ DemoApplication.java
     package com.jitendra.jpa.hibernate;
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
