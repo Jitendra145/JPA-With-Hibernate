@@ -1,0 +1,1 @@
+insert into course (id,name) values(10000,'JPA with Hibernate');
