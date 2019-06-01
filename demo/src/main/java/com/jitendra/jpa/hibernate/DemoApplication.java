@@ -23,8 +23,7 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Course result = repository.findById(10000);
-		logger.info("Course for 10000-->{}", result);
+		repository.playWithEntityManager();
 	}
 
 }
