@@ -2,7 +2,6 @@ package com.jitendra.jpa.hibernate.repository;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -12,9 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.jitendra.jpa.hibernate.DemoApplication;
-import com.jitendra.jpa.hibernate.entity.Course;
-import com.jitendra.jpa.hibernate.entity.Passport;
-import com.jitendra.jpa.hibernate.entity.Student;
+import com.jitendra.jpa.hibernate.entity.*;;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes=DemoApplication.class)
@@ -33,7 +30,7 @@ public class StudentRepositoryTest {
 	public void someTest() {
 		repository.extracted();
 	}
-
+/*
 	@Test
 	@Transactional
 	public void retriveStudentAndPassportDetails() {
@@ -55,7 +52,7 @@ public class StudentRepositoryTest {
 	public void saveStudentWithPassport_basic(){
 		repository.saveStudentWithPassport();
 	}*/
-	
+	/*
 	@Test
 	@Transactional
 	public void retriveStudentAndCourse() {
@@ -70,5 +67,15 @@ public class StudentRepositoryTest {
 		Course course = em.find(Course.class, 10000);
 		logger.info("Course-->{}",course);
 		logger.info("Students-->{}",course.getStudents());
+	}
+	*/
+	@Test
+	@Transactional
+	public void setAddressDetails() {
+		Student student = em.find(Student.class,20001);
+		//student.setAddress(new Address("line1","line2","city"));
+		//em.flush();
+		logger.info("Student-->{}",student);
+		logger.info("Passport-->{}",student.getPassport());
 	}
 }

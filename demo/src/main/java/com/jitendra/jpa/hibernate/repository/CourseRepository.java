@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.jitendra.jpa.hibernate.entity.Course;
 import com.jitendra.jpa.hibernate.entity.Review;
+import com.jitendra.jpa.hibernate.entity.ReviewRating;
 
 @Repository
 @Transactional
@@ -61,11 +62,11 @@ public class CourseRepository {
 		Course course = findById(10002);
 		logger.info("All reviews-->{}",course.getReviews());
 		// add 2 reviews,
-		Review review1 = new Review("5", "Awesome Course");
+		Review review1 = new Review(ReviewRating.FIVE, "Awesome Course");
 		course.addReview(review1);
 		review1.setCourse(course);
 		
-		Review review2 = new Review("5", "Amazing Course");
+		Review review2 = new Review(ReviewRating.FIVE, "Amazing Course");
 		course.addReview(review2);
 		review2.setCourse(course);
 		
