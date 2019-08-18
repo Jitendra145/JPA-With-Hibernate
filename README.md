@@ -1,6 +1,7 @@
 # JPA-With-Hibernate
 It's step by step process of creating Hibernate application using Spring Boot, H2 DB
-Section 5: JPA and hibernate in depth
+
+## Section 5: JPA and hibernate in depth
 
 Introduction to Jpa and Hibernate in depth
 
@@ -42,6 +43,12 @@ Introduction to Jpa and Hibernate in depth
         }
 
     }
+
+@Enitity: mark the class as entity
+
+@Id:mark the field as primary key in db
+
+@GeneratedValue:tells JPA to generate the value
 
 # Step 3:Create findById using JPA EntityManager
 
