@@ -144,3 +144,30 @@ public void run(String...arg0) throws Exception{
 }
 ```
 
+## Step 08- Write a save method update and insert an entity
+```
+@Repository
+@Transactional
+public class CourseRepository{
+
+@Autowired
+EntityManager em;
+
+--findById(Long id){--}
+
+  public void deleteById(Long id){
+    //
+  }
+  
+  public Course save(Course course){
+    if(course.getId()==null){
+      //insert
+      em.persist(course);
+    }else{
+      //update
+      em.merge(course);
+    }
+    return course;
+  }
+}
+```
